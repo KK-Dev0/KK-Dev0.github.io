@@ -90,9 +90,9 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px}
   <h2>About <span>me</span></h2>
   <p style="color:var(--mu);max-width:720px">I work on computer vision and NLP problems end to end: preparing data, training and evaluating models, and deploying them as web applications. I pay particular attention to evaluation, including held-out testing, calibration and documenting where a model fails. Outside of tech, I enjoy sketching, psychology and time outdoors.</p>
   <div class="stats">
-    <div class="st"><b>5</b><small>projects completed</small></div>
+    <div class="st"><b>6</b><small>projects completed</small></div>
+    <div class="st"><b>0.868</b><small>ROC-AUC, credit-risk model</small></div>
     <div class="st"><b>91.1%</b><small>NLP classifier accuracy</small></div>
-    <div class="st"><b>0.926</b><small>mAP50, YOLOv8 detector</small></div>
   </div>
 </section>
 
@@ -118,8 +118,8 @@ footer{text-align:center;color:var(--mu);font-size:13px;padding:30px}
     <div><small>AUG 2024 – MAR 2028</small><h4>BCA, Asansol Engineering College</h4><p>Year 1 CGPA 9.48, Year 2 CGPA 9.09. Semester SGPA: 9.41, 9.55, 9.29, 8.89.</p></div>
     <div><small>NOV 2025</small><h4>GDG on Campus AEC, Web Bootcamp</h4><p>Three days of HTML, CSS and JavaScript, ending with a game built from scratch.</p></div>
     <div><small>MAR 2026</small><h4>IHMMC-2026, AEC Hardware Club</h4><p>Built a mining gas alarm system model for the hardware model-making competition.</p></div>
-    <div><small>2026</small><h4>Smart India Hackathon, Evaluation Lead</h4><p>Led model evaluation for tropical cyclone intensity classification.</p></div>
-    <div><small>JUL 2026</small><h4>SparkIIT AI Training &amp; Internship Program</h4><p>Three-month batch. Completed a 6-topic document classifier as the capstone project.</p></div>
+    <div><small>2026</small><h4>Smart India Hackathon, Evaluation Lead</h4><p>Led model evaluation for VAYUVEGA, a tropical cyclone intensity classifier.</p></div>
+    <div><small>JUL 2026</small><h4>SparkIIT AI Training &amp; Internship Program</h4><p>Three-month batch. Completed two projects: a document classifier and an explainable credit-risk decision-support system.</p></div>
     <div><small>OCT 2026</small><h4>Hacktoberfest Completionist</h4><p>Completed Backyard Sweep and Stuck Doctor, and wrote about both on DEV.</p></div>
   </div>
 </section>
@@ -151,11 +151,12 @@ const EMAIL = "kaushikeekarmakar@gmail.com";
 
 /* ---------- PROJECTS ---------- */
 const P = [
- {n:"Backyard Sweep",k:"Mosquito breeding-site detector",d:"YOLOv8n trained to spot tires, vases, bottles, coconut shells and drain inlets. 0.926 mAP50 on the test split, then field-tested on my own photos to document where it fails.",t:["YOLOv8","Ultralytics","Python"],code:"https://github.com/KK-Dev0/Mosquito-Breeding-Detector",post:"https://dev.to/piks_dev/backyard-sweep-a-ten-minute-walk-to-find-mosquito-breeding-spots-and-what-my-own-photos-taught-me-371a",live:""},
- {n:"PRISM-TC",k:"Cyclone intensity classifier · SIH 2026",d:"EfficientNet-B0 classifying tropical cyclone intensity from satellite images. As Evaluation Lead I ran the held-out test, calibration checks and the model comparison.",t:["PyTorch","timm","EfficientNet"],code:"https://github.com/KK-Dev0/PRISM-TC",post:"",live:""},
- {n:"Document Classification AI",k:"NLP · SparkIIT capstone",d:"TF-IDF + tuned Linear SVM reaching 91.1% accuracy on 6 topics, benchmarked against sentence embeddings and deployed as a Streamlit app with explanations.",t:["scikit-learn","TF-IDF","Streamlit"],code:"https://github.com/KK-Dev0/Document-Classification-AI",post:"",live:""},
- {n:"TaskFlow",k:"Task & focus workspace",d:"Flask + SQLite productivity app: categories, priorities, due dates, a dashboard, a focus timer and a transparent rules-based planner.",t:["Flask","SQLite","JavaScript"],code:"https://github.com/KK-Dev0/TaskFlow",post:"",live:""},
- {n:"Stuck Doctor",k:"Local-LLM nudge app",d:"A local Gemma model that helps people who keep putting off the doctor finally book an appointment. Built for the Hacktoberfest challenge.",t:["Gemma","Ollama","Gradio"],code:"https://github.com/KK-Dev0/Stuck_Doctor",post:"https://dev.to/piks_dev/stuck-doctor-362f",live:""}
+ {n:"CreditSense AI",k:"Credit-risk decision support · SparkIIT capstone 2",d:"Predicts 2-year serious delinquency from 150,000 real borrowers (0.868 ROC-AUC on 30,000 held-out). Turns risk into a cost-based approve / review / decline rule, explains each score and includes an age-group fairness audit.",t:["scikit-learn","Flask","Fairness audit"],code:"https://github.com/KK-Dev0/Predictive-Decision-Support-AI",post:"",live:"https://predictive-decision-support-ai.onrender.com"},
+ {n:"Backyard Sweep",k:"Mosquito breeding-site detector",d:"YOLOv8n trained to spot tires, vases, bottles, coconut shells and drain inlets. 0.926 mAP50 on the test split, then field-tested on my own photos to document where it fails.",t:["YOLOv8","Ultralytics","Python"],code:"https://github.com/KK-Dev0/Mosquito-Breeding-Detector",post:"https://dev.to/piks_dev/backyard-sweep-a-ten-minute-walk-to-find-mosquito-breeding-spots-and-what-my-own-photos-taught-me-371a",live:"https://mosquito-breeding-detector.onrender.com"},
+ {n:"VAYUVEGA (PRISM-TC)",k:"Cyclone intensity classifier · SIH 2026",d:"EfficientNet-B0 classifying tropical cyclone intensity from satellite images. As Evaluation Lead I ran the held-out test, calibration checks and the model comparison.",t:["PyTorch","timm","EfficientNet"],code:"https://github.com/KK-Dev0/PRISM-TC",post:"",live:"https://prism-tc.onrender.com"},
+ {n:"Document Classification AI",k:"NLP · SparkIIT capstone",d:"TF-IDF + tuned Linear SVM reaching 91.1% accuracy on 6 topics, benchmarked against sentence embeddings and deployed as a Streamlit app with explanations.",t:["scikit-learn","TF-IDF","Streamlit"],code:"https://github.com/KK-Dev0/Document-Classification-AI",post:"",live:"https://docclassify-ai.onrender.com"},
+ {n:"TaskFlow",k:"Task & focus workspace",d:"Flask + SQLite productivity app: categories, priorities, due dates, a dashboard, a focus timer and a transparent rules-based planner.",t:["Flask","SQLite","JavaScript"],code:"https://github.com/KK-Dev0/TaskFlow",post:"",live:"https://taskflow-iv7j.onrender.com"},
+ {n:"Stuck Doctor",k:"Local-LLM nudge app",d:"A local Gemma model that helps people who keep putting off the doctor finally book an appointment. Built for the Hacktoberfest challenge.",t:["Gemma","Ollama","Gradio"],code:"https://github.com/KK-Dev0/Stuck_Doctor",post:"https://dev.to/piks_dev/stuck-doctor-362f",live:"https://stuck-doctor.onrender.com"}
 ];
 document.getElementById("pg").innerHTML = P.map(p=>`<article class="card"><h3>${p.n}</h3><div class="k">${p.k}</div><p>${p.d}</p><div class="t">${p.t.map(x=>`<span>${x}</span>`).join("")}</div><div class="lk">${p.live?`<a href="${p.live}" target="_blank" rel="noopener">Live ↗</a>`:""}<a href="${p.code}" target="_blank" rel="noopener">Code ↗</a>${p.post?`<a href="${p.post}" target="_blank" rel="noopener">Write-up ↗</a>`:""}</div></article>`).join("");
 
